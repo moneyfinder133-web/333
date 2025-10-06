@@ -1,0 +1,21 @@
+
+<!-- saved from url=(0057)https://www.gruporoldan.com.co/siev/php/Cargar_Select.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><script type="text/javascript">
+                  //alert(document.domain);
+                  var lo_Ventana = parent.top;
+                  lo_Combo = (document.getElementById('pais_barra_comunicaciones') != null) ? document.getElementById('pais_barra_comunicaciones') : parent.document.getElementById('pais_barra_comunicaciones');
+
+                  if (lo_Combo != null) {
+                      lo_Combo.length = 0;
+lo_Combo[0] = new Option ('Seleccionar','');
+ lo_Combo[lo_Combo.length] = new Option ('Colombia','COL|57');
+lo_Combo.selectedIndex=0;
+  }
+                  // EJECUTAR LA FUNCION Datos_Carga_Id_Objeto
+                  if (typeof Datos_Carga_pais_barra_comunicaciones == 'function') { 
+                      Datos_Carga_pais_barra_comunicaciones();
+                  } else {
+                      if (typeof parent.Datos_Carga_pais_barra_comunicaciones == 'function') { parent.Datos_Carga_pais_barra_comunicaciones(); }
+                  }
+                </script><script type="text/javascript">if (typeof parent.Cargar_Indicativo_Defecto == 'function') { parent.Cargar_Indicativo_Defecto(); } else { alert('Cargar_Indicativo_Defecto no es funcion'); } </script><script>if (typeof parent.Cerrar_Loading == 'function') { parent.Cerrar_Loading(); } </script><script type="text/javascript">parent.document.close();
+</script></head><body></body></html>

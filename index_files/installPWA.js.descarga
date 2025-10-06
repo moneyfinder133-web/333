@@ -1,0 +1,48 @@
+let deferredPrompt;
+
+// Escucha el evento 'beforeinstallprompt'
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Evita que el navegador muestre el banner automáticamente
+  e.preventDefault();
+
+  // Guarda el evento para usarlo más tarde
+  deferredPrompt = e;
+
+  // Muestra tu propio botón o UI para indicar al usuario que puede instalar la app
+  showInstallButton();
+});
+
+// Función para mostrar tu botón personalizado de instalación
+function showInstallButton() {
+  const btnInstall = document.getElementById('btnInstall');
+  if (btnInstall) {
+    btnInstall.style.display = 'block';
+
+    // Agrega un evento al botón para manejar la instalación cuando se haga clic
+    btnInstall.addEventListener('click', (e) => {
+      // Oculta tu botón personalizado
+      hideInstallButton();
+
+      // Muestra el banner de instalación
+      deferredPrompt.prompt();
+
+      // Espera a ver qué eligió el usuario
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('El usuario aceptó la instalación');
+        } else {
+          console.log('El usuario rechazó la instalación');
+        }
+        deferredPrompt = null;
+      });
+    });
+  }
+}
+
+// Función para ocultar tu botón personalizado de instalación
+function hideInstallButton() {
+  const btnInstall = document.getElementById('btnInstall');
+  if (btnInstall) {
+    btnInstall.style.display = 'none';
+  }
+}

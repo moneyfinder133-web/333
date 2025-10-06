@@ -1,0 +1,278 @@
+.btn__wthasapp {
+
+  position: fixed;
+
+  width: 60px;
+
+  height: 60px;
+
+  bottom: 100px;
+
+  right: 20px;
+
+  background-color: #25d366;
+
+  color: #fff;
+
+  border-radius: 50px;
+
+  text-align: center;
+
+  font-size: 30px;
+
+  box-shadow: 2px 2px 3px #999;
+
+  z-index: 1000;
+
+}
+
+.btn__wthasappIcon {
+
+  margin-top: 16px;
+
+  color: #fff;
+
+}
+
+.btn__wthasapp:hover {
+
+  color: #fff;
+
+}
+
+/* HERO */
+
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+
+
+.swiper-slide {
+
+  background-position: center;
+
+  background-size: cover;
+
+}
+
+
+
+.swiper-slide img {
+
+  display: block;
+
+  width: 100%;
+
+}
+
+.hero__swiper {
+
+  background-size: cover;
+
+  background-position: center center;
+
+}
+
+.swiper-pagination-bullet-active {
+
+  background: #00072d;
+
+}
+
+.hero__titleOrange {
+
+  color: #eb6616;
+
+  font-size: 2rem !important;
+
+}
+
+@media (max-width: 480px) {
+
+  .swiper {
+
+    height: auto;
+
+  }
+
+}
+
+
+
+/* SERVICES */
+
+.services__images {
+
+  width: 100%;
+
+  border-top-right-radius: 10px;
+
+  border-top-left-radius: 10px;
+
+}
+
+
+
+/* NEWS */
+
+.priceTitle {
+
+  font-size: 1.2rem;
+
+}
+
+.solutionsIcon {
+
+  font-size: 2.5rem !important;
+
+  -webkit-text-stroke: 1px;
+
+  color: #eb6616;
+
+}
+
+.blogCard__title {
+
+  font-size: 1rem;
+
+}
+
+.blogVideosTop {
+
+  height: 200px;
+
+  background-size: cover;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+}
+
+
+
+/* CARD */
+
+.card__textBody {
+
+  min-height: 75px;
+
+}
+
+.bg-gradient {
+
+  background-color: #f29104;
+
+  background-image: linear-gradient(to right, #f29104 0%, #f29104 30%, #eb6616 100%);
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+
+  .btn {
+
+    white-space: inherit;
+
+  }
+
+}
+
+
+
+
+
+
+
+.img_zoom_container {
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+
+
+.zoom-effect {
+
+  transition: transform 1.5s ease;
+
+}
+
+
+
+.img_zoom_container:hover .zoom-effect {
+
+  transform: scale(1.1);
+
+}
+
+
+
+.overlay-text {
+
+  position: absolute;
+
+  bottom: 10px; /* Ajusta según necesidad */
+
+  left: 10px;  /* Ajusta según necesidad */
+
+}
+
+
+
+
+
+/* Cambiamos de .img-fluid.zoom-effect a .card-img-zoom */
+
+.card-img-zoom {
+
+  height: 200px;
+
+  object-fit: cover;
+
+}
+
+
+
+
+
+
+
+/* Cambiamos de .card-img-top a .card-custom-img */
+
+.card-custom-img {
+
+  display: block;
+
+  overflow: hidden;
+
+  /*height: 200px;*/
+
+}
+
+
+.card-custom-img img {
+
+  /*height: 100%;*/
+
+  object-fit: cover;
+
+}
+
+.navbar-search-field {
+  flex-grow: 1;
+}
+
+.form-control-xl {
+  height: calc(1.5em + 1rem + 2px);
+}
+
+#busCodigoForm {
+  margin: 0;
+}
+
